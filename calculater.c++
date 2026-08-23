@@ -23,7 +23,7 @@ class calculatore1
         GREEN"Dividing",
         MAGENTA"Multiplying",
         BLUE"clear"};
-        
+
         bool _isZero(float number)
         {
             return (number == 0);
@@ -70,6 +70,11 @@ public:
         //طباعة العدد النهاءي
        cout << YELLOW << "Result after " << str[sing] + " "<<WHITE<< number << " is " << result << RESET <<endl;
     }
+    void print_rusult_final()
+    {
+        //?print final result
+       cout << YELLOW << "Result final" << " "<<WHITE<< result << RESET <<endl;
+    }
 };
 int main ()
 {
@@ -84,6 +89,7 @@ int main ()
     cal.printResult();
     cal.set_mul(3);
     cal.printResult();
-    cal.set_clear();
+    //cal.set_clear();
     cal.printResult();
+    cal.print_rusult_final();
 }
