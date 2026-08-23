@@ -14,10 +14,20 @@ using namespace std;
 
 class calculatore1
 {
-    int result = 0;
-    int number;
+    float result = 0;
+    float number;
     int sing;
-    string str[5] = {RED"adding",CYAN"subtracting",GREEN"Dividing",MAGENTA"Multiplying",BLUE"clear"};
+    string str[5] = {
+        RED"adding",
+        CYAN"subtracting",
+        GREEN"Dividing",
+        MAGENTA"Multiplying",
+        BLUE"clear"};
+        
+        bool _isZero(float number)
+        {
+            return (number == 0);
+        }
 public:
     void set_add(int sum)
     {
@@ -43,6 +53,8 @@ public:
     void set_divide(int div)
     {
         //قسمة العدد الجديد على النتيجة السابقة
+        if(_isZero(div))
+            div  = 1;
         number = div;
         result /= div;
         sing = 3;
