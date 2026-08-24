@@ -4,6 +4,7 @@ using namespace std;
 class clsPerson
 {
 public:
+
         string FullName;
         //This is Instructor will be called when object is built.
         clsPerson()
